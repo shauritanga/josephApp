@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #cbeafb;
+}
+/* Main View */
+.view {
+    height: 100vh;
+    background: radial-gradient(circle farthest-corner at right bottom,#35bd4c 0,#4a9e6a 100%);
+}
+header {
+    margin: 0 auto;
+    padding-top: 1em;
+    width: 80%;
+    height: 80px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: baseline;
+}
+.brand {
+    margin-right: 1em;
+}
+.brand a {
+    text-decoration: none;
+    font-family: 'Bungee Inline', cursive;
+    padding: .2em;
+    color: #fff;
+    font-weight: bolder;
+}
+.navigation {
+    width: 100%;
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+}
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+}
+input[type='text'] {
+    border: 1px solid #fff;
+    background-color: transparent;
+    padding: .5em;
+    color: #fff;
+    border-radius: 5px;
+}
+input[type='submit'] {
+    border: 1px solid white;
+    background-color: transparent;
+    color: #fff;
+    padding: .5em;
+    border-radius: 5px;
+}
+.foreword {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    width: 80%;
+    height: 70vh;
+    opacity: .5;
+    /* background: #fff; */
+}
+
+
+/* Contents */
+.contents {
+    display: flex;
+    margin: .5em;
+}
+.specifications {
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 360px;
+}
+/*footer css*/
+.copyright {
+    height: 10em;
+    background-color: black;
+    color: #fff;
+}
+.copyright div {
+    margin: 0 auto;
+    width: 80%;
+
+}
+.copyright p {
+    padding-top: 1em;
+}

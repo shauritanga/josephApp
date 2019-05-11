@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=title %></title>
+</head>
+<body>
+    <div class="view">
+        <header>
+            <div class="brand">
+                <a href="/">Joseph</a>
+            </div>
+            <div class="navigation">
+                <a href="/">Home</a>
+                <form action="/search" method="GET">
+                    <input type="text" name="q" id="search" placeholder="Type name">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </header>
+        <div class="foreword">
+            <p>Joseph Agromechanics is the campony that provide large scale and small scale farmers information about</p>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="copyright">
+            <div>
+                <p>All right reserved &copy;  <%= new Date().getFullYear() %></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

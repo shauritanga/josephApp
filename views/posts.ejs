@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link rel="stylesheet" href="/css/post.css">
+    <title><%=title %></title>
+</head>
+<body>
+    <div class="view">
+        <header>
+            <div class="brand">
+                <a href="/">Joseph</a>
+            </div>
+            <div class="navigation">
+                <a href="/">Home</a>
+                <form action="/search" method="GET">
+                    <input type="text" name="q" id="search" placeholder="Type name">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </header>
+            <% posts.map(tractor => { %>
+                <div class="contents">
+                    <div class="image">
+                        <img src="/assets/<%= tractor.image %>" />
+                    </div>
+                    <div class="specifications">
+                        <h4>Tractor Details Report</h4>
+                        <table>
+                            <tr>
+                                <td>Tractor Type</td>
+                                <td><%= tractor.type%></td>
+                            </tr>
+                            <tr>
+                                <td>Serial Number</td>
+                                <td><%= tractor.serial %></td>
+                            </tr>
+                            <tr>
+                                <td>Model</td>
+                                <td><%= tractor.model %></td>
+                            </tr>
+                            <tr>
+                                <td>Price(Tshs)</td>
+                                <td><%= tractor.price %></td>
+                            </tr>
+                            <tr>
+                                <td>Purchase age (years)</td>
+                                <td><%= tractor. purchasingAge %></td>
+                            </tr>
+                        </table>
+                        <h4>Capacity</h4>
+                        <table>
+                            <tr>
+                                <td>Fuel consuption per acres (Litres)</td>
+                                <td><%= tractor.capacity.fuel%></td>
+                            </tr>
+                            <tr>
+                                <td>Average acres cultivated per day</td>
+                                <td><%= tractor.capacity.acrePerDay %></td>
+                            </tr>
+                            <tr>
+                                <td>Average acres per hour</td>
+                                <td><%= tractor.capacity.acrePerHour %></td>
+                            </tr>
+                            <tr>
+                                <td>Average hector per year</td>
+                                <td><%= tractor.capacity.hectorPerYear %></td>
+                            </tr>
+                            <tr>
+                                <td>Operating hours</td>
+                                <td><%= tractor. capacity.operatingHours %></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> 
+            <% }) %>
+        </div>
+    <footer class="page-footer">
+        <div class="copyright">
+            <div>
+                <p>All right reserved &copy;  <%= new Date().getFullYear() %></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

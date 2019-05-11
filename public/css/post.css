@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 24px;
+}
+/* Main View */
+.view {
+    height: 100vh;
+}
+header {
+    margin: 0 auto;
+    padding-top: 1em;
+    width: 80%;
+    height: 80px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: baseline;
+}
+.brand {
+    margin-right: 1em;
+}
+.brand a {
+    text-decoration: none;
+    font-family: 'Bungee Inline', cursive;
+    padding: .2em;
+    color: #fff;
+    font-weight: bolder;
+}
+.navigation {
+    width: 100%;
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+}
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+}
+/* Contents */
+.contents {
+    margin: 0 auto;
+    width: 80%;
+    background: #aaa;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+}
+.specifications {
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 490px;
+}
+/*footer css*/
+.copyright {
+    height: 5em;
+    background-color: black;
+    color: #fff;
+}
+.copyright div {
+    margin: 0 auto;
+    width: 80%;
+
+}
+.copyright p {
+    padding-top: 1em;
+}
+
+tr, td{
+    padding: 0 .5em;
+    border: 1px solid #ccc;
+}
+tr:nth-of-type(even) {
+    background-color: #ccc;
+    color: #000;
+}
+.contents h4 {
+    background-color: #eee;
+    padding: .2em;
+}
