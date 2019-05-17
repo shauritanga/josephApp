@@ -1,14 +1,33 @@
 const express = require('express');
+const session = require('express-session')
 const tractors = require('./tractors');
-const bodyParser = require('body-parser');
+const admin = require('./admin')
 
 const app = express()
 const port = process.env.PORT || 3000;
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json())
+
+
+// CONFIG SESSION
+app.use(session({
+    secret: 'Shauritanga loves you all',
+    resave: false,
+    saveUninitialized: false
+}));
+
+// make user available to all template
+app.use((req, res, next) => {
+    res.locals.currentUser = req.session.userId;
+    next();
+})
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+
+
 
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs')
+
+
 
 //Landing page
 app.get('/', (req, res) => {
@@ -16,6 +35,30 @@ app.get('/', (req, res) => {
         title: 'Atthanas'
     })
 });
+app.get('/admin', (req, res) => {
+    if(req.session.userID) {
+        return res.render('admin', {
+            title: 'Administration'
+        })
+    }
+    return res.redirect('/login');
+});
+
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+app.post('/login', (req, res) => {
+    let user = admin.filter(user => {
+        return user.email === req.body.email;
+    });
+    if(user[0]) {
+        req.session.userID = user[0];
+        res.redirect('/admin')
+    } else {
+        res.redirect(400, '/login')
+    }
+})
 
 
 //Search route
