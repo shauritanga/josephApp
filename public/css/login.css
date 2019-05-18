@@ -43,6 +43,7 @@ form[name='login'] {
 lable {
     display: inline-block;
     margin-botom: 2.5em;
+    color: #f9010a;
 }
 
 form[name='login'] h4 {
