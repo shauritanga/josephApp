@@ -42,9 +42,8 @@ form[name='login'] {
 }
 lable {
     display: inline-block;
-    margin-botom: 2.5em;
+    margin-bottom: 2.5em;
     width: 40%;
-    color: #f9010a;
 }
 
 form[name='login'] h4 {
@@ -55,6 +54,7 @@ form[name='login'] h4 {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: 900;
+    margin-bottom: 1em;
 }
 input {
     width: 40%;
