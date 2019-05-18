@@ -55,9 +55,9 @@ app.post('/login', (req, res) => {
         return user.email === req.body.email;
     });
     if(user[0].password === req.body.password) {
-        res.redirect('/admin')
+        res.render('/admin')
     } else{
-        
+        res.redirect('/login')
     }
 })
 
