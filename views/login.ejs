@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link rel="stylesheet" href="/css/form.css">
+    <title><%=title %></title>
 </head>
 <body>
-    <form action="/login" method="POST">
-        <h4>Login</h4>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="login">
-    </form>
+    <div class="view">
+        <header>
+            <div class="brand">
+                <a href="/">JoseFredy</a>
+            </div>
+        </header>
+        <div class="foreword">
+           <form name="register" action="/login" method="post">
+           <h4>Please Login</h4>
+           <lable for='email' > Email </lable>
+           <input type = 'email' name ='email' id='mail' /><br />
+           <lable for='password'> Password </lable>
+           <input type = 'password' name ='password' id='password' /><br />
+           <input type ='submit' value='login' />
+        </form>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="copyright">
+            <div>
+                <p>All right reserved &copy;  <%= new Date().getFullYear() %></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
