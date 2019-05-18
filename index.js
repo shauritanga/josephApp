@@ -32,7 +32,7 @@ app.set('view engine', 'ejs')
 //Landing page
 app.get('/', (req, res) => {
     res.render('index',{
-        title: 'Atthanas'
+        title: 'JoseFredy | Home'
     })
 });
 app.get('/admin', (req, res) => {
