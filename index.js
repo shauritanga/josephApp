@@ -50,19 +50,19 @@ app.get('/login', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
-    let user = admin.filter(user => {
-        return user.email === req.body.email;
-    });
+// app.post('/login', (req, res) => {
+//     let user = admin.filter(user => {
+//         return user.email === req.body.email;
+//     });
 
-    if(user[0].password === req.body.password) {
-        if(user[0]) {
-        req.session.userID = user[0];
-        res.redirect('/admin')
-        } else {
-            res.redirect('/login')
-        }
-})
+//     if(user[0].password === req.body.password) {
+//         if(user[0]) {
+//         req.session.userID = user[0];
+//         res.redirect('/admin')
+//         } else {
+//             res.redirect('/login')
+//         }
+// })
 
 
 //Search route
