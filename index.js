@@ -45,7 +45,9 @@ app.get('/admin', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login', {
+        title: 'Login'
+    })
 })
 
 app.post('/login', (req, res) => {
