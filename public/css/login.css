@@ -41,6 +41,7 @@ form[name='login'] {
     margin: 2em 0;
 }
 form[name='login'] label{
+    margin-bottom: 1.5em;
     display: inline-block;
     width: 40%;
     line-height: 2.5em;
