@@ -40,12 +40,9 @@ form[name='login'] {
     padding: 1.5em;
     margin: 2em 0;
 }
-form[name='login'] label{
-    margin-bottom: 1.5em;
+lable {
     display: inline-block;
-    width: 40%;
-    line-height: 2.5em;
-    font-size: 28px;
+    margin-botom: 1.5em;
 }
 
 form[name='login'] h4 {
