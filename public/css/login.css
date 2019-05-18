@@ -42,7 +42,7 @@ form[name='login'] {
 }
 lable {
     display: inline-block;
-    margin-botom: 1.5em;
+    margin-botom: 2.5em;
 }
 
 form[name='login'] h4 {
@@ -58,6 +58,10 @@ input {
     width: 40%;
     height: 2.5em;
     line-height: 2.5em;
+}
+input[type='submit'] {
+    width: 80px;
+    background: #f90a1a;
 }
 .page-footer {
     height: 100px;
