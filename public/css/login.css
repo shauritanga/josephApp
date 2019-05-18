@@ -65,6 +65,12 @@ input[type='submit'] {
     width: 80px;
     background: #01f9a1;
 }
+
+input[type='submit']:hover{
+    width: 100px;
+    color: white;
+    background: black;
+}
 .page-footer {
     height: 100px;
     background-color: #000;
