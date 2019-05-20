@@ -51,13 +51,19 @@ app.get('/login', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-    let user = admin.filter(user => {
-        return user.email === req.body.email;
-    });
-    if(user[0].password === req.body.password) {
-        res.redirect('/admin')
-    } else{
-        res.redirect('/login')
+    if(!req.body.email && !req.body.password) {
+        return;
+    } else {
+        let user = admin.filter(user => {
+            return user.email === req.body.email;
+        });
+        const { password } = user[0];
+        if(password === req.body.password) {
+            req.session.userID = user[0];
+            res.redirect('/admin')
+        } else{
+            res.redirect('/login')
+        }
     }
 })
 
